@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  directories:
+  - node_modules
+install:
+- echo 'install'
+script:
+- echo 'script'
+after_success:
+- echo 'after_success'
+branches:
+  except:
+  - gh-pages
+notifications:
+  email: false
