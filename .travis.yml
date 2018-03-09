@@ -5,7 +5,7 @@ cache:
 install:
 - echo 'install'
 script:
-- echo 'script'
+- bash script.sh
 after_success:
 - echo 'after_success'
 branches:
@@ -13,3 +13,6 @@ branches:
   - gh-pages
 notifications:
   email: false
+env:
+  global:
+    secure: ZQyLEi1emfAKgEZ0IFQjhrIFqqxFT34wajVMJhYKypbi2vq0ZLEOQCRVoBpplMcJUAkHPPXH+sEk9YxreVULa4zFT3zTfBDKZ4Bb3SrlJ5qJ75R0PpDMIE2aihiZvK129cxricleSEY/0/VLXyE8F/jSy4U2+/BMSg0IFPjWTkW/EcO+SvvHMXYO2wecMpRa72q28pXuSkCbNqj6bADGhQrE3RQ9twH1ZSGKDueuSpkc6Z0qW6KO+Ii1+NIogToU8jvXo1tZlIA6oqKslQj4thqFp0vqO9sZnQOqlFV2qOpyf2ncdMwK94/9B47tXOgmeVemQR9VEP6RccCsvLqvJPzvYoksjPQAytUmVMUTudk7WEnwYj+QCtlvTBo1A11EP1Bywxpw7VRSlYmIv+EPpP3r2lfIlSqqlkDN4UN/xAp8EIXbx/4GXjZZTsk8qsfq0kYrBxlNWTEzx7nJ76o9DhHzRX9aouyLMquyuIRdp6t167PU+Coj5lcSINchU5uTiNIFeV/1f0iwyO4WJVgFpb5IgoLgFYfRqh+Y6nncFcMN+BCKZ5ntqPazPtKVBNImyq80rFYujYSxiTLZrbQ3sIZ/qpTWQ6s/yWuNXxt5u3BfOqdDN9rc03639X/7Z5AGdO70+GO/W/5rK9QSOenf6hO/vIqTdfi5WTAur8SDPpg=
