@@ -40,6 +40,10 @@ find wagtail -name ".gitignore" -exec rm {} \;
 cd ../../
 
 mkdir work
+
+echo "Copying dir '$SOURCE_DIR' contents for deployment."
+rsync -r --exclude .git --delete "$SOURCE_DIR/" work
+
 cd work
 
 echo "Creating a brand new local repo from scratch in dir $(pwd)."
@@ -47,9 +51,6 @@ git init
 
 echo "Create orphan branch $TARGET_BRANCH"
 git checkout --orphan "$TARGET_BRANCH"
-
-echo "Copying '$SOURCE_DIR' contents to '$(pwd)'."
-rsync -r --exclude .git --delete "$SOURCE_DIR/" .
 
 echo "Configuring git committer name and email."
 git config user.name "Travis CI"
